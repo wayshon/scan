@@ -6,5 +6,7 @@ target 'scan' do
     pod 'SDWebImage', '~> 4.4.6';
     pod 'YBImageBrowser', '~> 2.1.5';
     pod 'MJRefresh', '~> 3.1.15.7';
+    pod 'AFNetworking', '~> 3.0';
+    pod 'CWLateralSlide', '~> 1.6.3'
 end
 

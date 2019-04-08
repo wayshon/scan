@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.h
+//  tools
+//
+//  Created by 王旭 on 2019/3/23.
+//  Copyright © 2019 王旭. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+#define HOST @"https://www.2717.com"
+#define PATH @"/ent/meinvtupian"
+
+#define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RandomRGBColor RGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#endif /* PrefixHeader_h */
