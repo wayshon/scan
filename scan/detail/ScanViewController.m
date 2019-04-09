@@ -7,15 +7,14 @@
 //
 
 #import "ScanViewController.h"
-#import "FetchDetail.h"
 #import "SVProgressHUD.h"
 #import "ScanCollectionViewCell.h"
-#import "WaterfallCollectionViewLayout.h"
+#import "CollectionViewLayout.h"
 #import "YBImageBrowser.h"
 
-@interface ScanViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, WaterfallCollectionViewDelegate, YBImageBrowserDataSource>
+@interface ScanViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, MainCollectionViewDelegate, YBImageBrowserDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) WaterfallCollectionViewLayout *layout;
+@property (nonatomic, strong) CollectionViewLayout *layout;
 @property (nonatomic, strong) NSMutableArray *imgs;
 @property (nonatomic, strong) NSMutableArray *imagesCaches;
 @end
@@ -30,7 +29,6 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
         self.title = _desc;
     }
     
-    [self initData];
     [self initView];
     
 }
@@ -40,23 +38,9 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
     [super viewWillDisappear:animated];
 }
 
-- (void)initData {
-    if (_path) {
-        [SVProgressHUD showWithStatus:@"努力加载中.."];
-        [FetchDetail fetchData:_path Block:^(NSArray *result) {
-            NSLog(@"*****  result  == %@", result);
-            self.imgs = [NSMutableArray arrayWithArray:result];
-            dispatch_async(dispatch_get_main_queue(), ^() {
-                [SVProgressHUD dismiss];
-                [self.collectionView reloadData];
-            });
-        }];
-    }
-}
-
 - (NSArray *)imgs {
     if (!_imgs) {
-        _imgs = [NSMutableArray new];
+        _imgs = [NSMutableArray arrayWithArray:_images];
     }
     return _imgs;
 }
@@ -73,7 +57,7 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
     CGFloat kScreenWidth = size.width;
     CGFloat kScreenHeight = size.height;
     
-    self.layout = [WaterfallCollectionViewLayout new];
+    self.layout = [CollectionViewLayout new];
     self.layout.delegate = self;
     /**
      创建collectionView
@@ -93,7 +77,7 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_imgs count];
+    return [self.imgs count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -112,7 +96,12 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
             [self.imagesCaches addObject:image];
         }
         [self.layout prepareLayout];
-        [self.layout layoutAttributesForItemAtIndexPath:indexPath];
+//        [self.layout layoutAttributesForItemAtIndexPath:indexPath];
+        
+//        CollectionViewLayout *layout = [CollectionViewLayout new];
+//        layout.delegate = self;
+//        self.layout = layout;
+//        [self.collectionView setCollectionViewLayout:self.layout];
         
     };
     cell.dic = dic;
@@ -127,9 +116,9 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
     [browser show];
 }
 
-#pragma mark <WaterfallCollectionViewDelegate>
+#pragma mark <CollectionViewDelegate>
 
-- (CGFloat)waterflowLayout:(WaterfallCollectionViewLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth{
+- (CGFloat)waterflowLayout:(CollectionViewLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth{
     // 获取图片的宽高，根据图片的比例计算Item的高度。
     if (index < [_imagesCaches count]) {
         UIImage *image = [_imagesCaches objectAtIndex:index];
@@ -142,19 +131,19 @@ static NSString * const reuseIdentifier = @"WXDetailCell";
     }
 }
 
-- (NSInteger)columnCountInWaterflowLayout:(WaterfallCollectionViewLayout *)waterflowLayout{
+- (NSInteger)columnCountInWaterflowLayout:(CollectionViewLayout *)waterflowLayout{
     return 2;
 }
 
-- (CGFloat)columnMarginInWaterflowLayout:(WaterfallCollectionViewLayout *)waterflowLayout{
+- (CGFloat)columnMarginInWaterflowLayout:(CollectionViewLayout *)waterflowLayout{
     return 10;
 }
 
-- (CGFloat)rowMarginInWaterflowLayout:(WaterfallCollectionViewLayout *)waterflowLayout{
+- (CGFloat)rowMarginInWaterflowLayout:(CollectionViewLayout *)waterflowLayout{
     return 10;
 }
 
-- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(WaterfallCollectionViewLayout *)waterflowLayout{
+- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(CollectionViewLayout *)waterflowLayout{
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 

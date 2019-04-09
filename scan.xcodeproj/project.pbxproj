@@ -22,16 +22,13 @@
 		5020C90E225B9FE100334B9A /* string_piece.c in Sources */ = {isa = PBXBuildFile; fileRef = 5020C8FB225B9FE100334B9A /* string_piece.c */; };
 		5020C90F225B9FE100334B9A /* OCGumbo+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C900225B9FE100334B9A /* OCGumbo+Query.m */; };
 		5020C910225B9FE100334B9A /* OCGumbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C901225B9FE100334B9A /* OCGumbo.m */; };
-		5020C91F225B9FEE00334B9A /* WaterfallCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C912225B9FEE00334B9A /* WaterfallCollectionViewCell.m */; };
-		5020C920225B9FEE00334B9A /* WaterfallCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C915225B9FEE00334B9A /* WaterfallCollectionViewLayout.m */; };
-		5020C921225B9FEE00334B9A /* WaterfallCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C918225B9FEE00334B9A /* WaterfallCollectionViewController.m */; };
-		5020C922225B9FEE00334B9A /* WaterfallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C919225B9FEE00334B9A /* WaterfallModel.m */; };
-		5020C923225B9FEE00334B9A /* Fetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C91B225B9FEE00334B9A /* Fetch.m */; };
-		5020C924225B9FEE00334B9A /* FetchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C91E225B9FEE00334B9A /* FetchDetail.m */; };
 		5020C92A225BA01600334B9A /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C926225BA01600334B9A /* ScanViewController.m */; };
 		5020C92B225BA01600334B9A /* ScanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C929225BA01600334B9A /* ScanCollectionViewCell.m */; };
-		5020C92F225BA28100334B9A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C92E225BA28100334B9A /* MainViewController.m */; };
-		5020C932225BA8B600334B9A /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5020C931225BA8B600334B9A /* LeftViewController.m */; };
+		5046F1A2225CF3EE0012DDFB /* CollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046F19D225CF3EE0012DDFB /* CollectionViewLayout.m */; };
+		5046F1A3225CF3EE0012DDFB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046F19E225CF3EE0012DDFB /* MainViewController.m */; };
+		5046F1A4225CF3EE0012DDFB /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046F19F225CF3EE0012DDFB /* LeftViewController.m */; };
+		5046F1A7225CF4280012DDFB /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046F1A6225CF4280012DDFB /* MainCollectionViewCell.m */; };
+		5046F1AA225CF4580012DDFB /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046F1A9225CF4580012DDFB /* MainModel.m */; };
 		50D773582253A93D00C8794F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D773572253A93D00C8794F /* AppDelegate.m */; };
 		50D7735E2253A93D00C8794F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D7735C2253A93D00C8794F /* Main.storyboard */; };
 		50D773602253A93F00C8794F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D7735F2253A93F00C8794F /* Assets.xcassets */; };
@@ -96,27 +93,21 @@
 		5020C8FF225B9FE100334B9A /* OCGumbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGumbo.h; sourceTree = "<group>"; };
 		5020C900225B9FE100334B9A /* OCGumbo+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCGumbo+Query.m"; sourceTree = "<group>"; };
 		5020C901225B9FE100334B9A /* OCGumbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGumbo.m; sourceTree = "<group>"; };
-		5020C912225B9FEE00334B9A /* WaterfallCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewCell.m; sourceTree = "<group>"; };
-		5020C913225B9FEE00334B9A /* WaterfallModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallModel.h; sourceTree = "<group>"; };
-		5020C914225B9FEE00334B9A /* WaterfallCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewController.h; sourceTree = "<group>"; };
-		5020C915225B9FEE00334B9A /* WaterfallCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewLayout.m; sourceTree = "<group>"; };
-		5020C916225B9FEE00334B9A /* WaterfallCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewCell.h; sourceTree = "<group>"; };
-		5020C917225B9FEE00334B9A /* WaterfallCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewLayout.h; sourceTree = "<group>"; };
-		5020C918225B9FEE00334B9A /* WaterfallCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewController.m; sourceTree = "<group>"; };
-		5020C919225B9FEE00334B9A /* WaterfallModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallModel.m; sourceTree = "<group>"; };
-		5020C91B225B9FEE00334B9A /* Fetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fetch.m; sourceTree = "<group>"; };
-		5020C91C225B9FEE00334B9A /* FetchDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchDetail.h; sourceTree = "<group>"; };
-		5020C91D225B9FEE00334B9A /* Fetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetch.h; sourceTree = "<group>"; };
-		5020C91E225B9FEE00334B9A /* FetchDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchDetail.m; sourceTree = "<group>"; };
 		5020C926225BA01600334B9A /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		5020C927225BA01600334B9A /* ScanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanCollectionViewCell.h; sourceTree = "<group>"; };
 		5020C928225BA01600334B9A /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		5020C929225BA01600334B9A /* ScanCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanCollectionViewCell.m; sourceTree = "<group>"; };
 		5020C92C225BA04D00334B9A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		5020C92D225BA28100334B9A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		5020C92E225BA28100334B9A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		5020C930225BA8B600334B9A /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		5020C931225BA8B600334B9A /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		5046F19C225CF3EE0012DDFB /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		5046F19D225CF3EE0012DDFB /* CollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLayout.m; sourceTree = "<group>"; };
+		5046F19E225CF3EE0012DDFB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5046F19F225CF3EE0012DDFB /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		5046F1A0225CF3EE0012DDFB /* CollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayout.h; sourceTree = "<group>"; };
+		5046F1A1225CF3EE0012DDFB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5046F1A5225CF4280012DDFB /* MainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
+		5046F1A6225CF4280012DDFB /* MainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
+		5046F1A8225CF4580012DDFB /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		5046F1A9225CF4580012DDFB /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		50D773532253A93D00C8794F /* scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D773562253A93D00C8794F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50D773572253A93D00C8794F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,33 +218,7 @@
 			path = OCGumbo;
 			sourceTree = "<group>";
 		};
-		5020C911225B9FEE00334B9A /* Waterfall */ = {
-			isa = PBXGroup;
-			children = (
-				5020C912225B9FEE00334B9A /* WaterfallCollectionViewCell.m */,
-				5020C913225B9FEE00334B9A /* WaterfallModel.h */,
-				5020C914225B9FEE00334B9A /* WaterfallCollectionViewController.h */,
-				5020C915225B9FEE00334B9A /* WaterfallCollectionViewLayout.m */,
-				5020C916225B9FEE00334B9A /* WaterfallCollectionViewCell.h */,
-				5020C917225B9FEE00334B9A /* WaterfallCollectionViewLayout.h */,
-				5020C918225B9FEE00334B9A /* WaterfallCollectionViewController.m */,
-				5020C919225B9FEE00334B9A /* WaterfallModel.m */,
-			);
-			path = Waterfall;
-			sourceTree = "<group>";
-		};
-		5020C91A225B9FEE00334B9A /* fetchData */ = {
-			isa = PBXGroup;
-			children = (
-				5020C91B225B9FEE00334B9A /* Fetch.m */,
-				5020C91C225B9FEE00334B9A /* FetchDetail.h */,
-				5020C91D225B9FEE00334B9A /* Fetch.h */,
-				5020C91E225B9FEE00334B9A /* FetchDetail.m */,
-			);
-			path = fetchData;
-			sourceTree = "<group>";
-		};
-		5020C925225BA01600334B9A /* scan */ = {
+		5020C925225BA01600334B9A /* detail */ = {
 			isa = PBXGroup;
 			children = (
 				5020C928225BA01600334B9A /* ScanViewController.h */,
@@ -261,7 +226,24 @@
 				5020C927225BA01600334B9A /* ScanCollectionViewCell.h */,
 				5020C929225BA01600334B9A /* ScanCollectionViewCell.m */,
 			);
-			path = scan;
+			path = detail;
+			sourceTree = "<group>";
+		};
+		5046F19B225CF3EE0012DDFB /* mian */ = {
+			isa = PBXGroup;
+			children = (
+				5046F19C225CF3EE0012DDFB /* LeftViewController.h */,
+				5046F19F225CF3EE0012DDFB /* LeftViewController.m */,
+				5046F1A0225CF3EE0012DDFB /* CollectionViewLayout.h */,
+				5046F19D225CF3EE0012DDFB /* CollectionViewLayout.m */,
+				5046F1A1225CF3EE0012DDFB /* MainViewController.h */,
+				5046F19E225CF3EE0012DDFB /* MainViewController.m */,
+				5046F1A5225CF4280012DDFB /* MainCollectionViewCell.h */,
+				5046F1A6225CF4280012DDFB /* MainCollectionViewCell.m */,
+				5046F1A8225CF4580012DDFB /* MainModel.h */,
+				5046F1A9225CF4580012DDFB /* MainModel.m */,
+			);
+			path = mian;
 			sourceTree = "<group>";
 		};
 		50D7734A2253A93D00C8794F = {
@@ -289,18 +271,13 @@
 		50D773552253A93D00C8794F /* scan */ = {
 			isa = PBXGroup;
 			children = (
-				5020C925225BA01600334B9A /* scan */,
-				5020C91A225B9FEE00334B9A /* fetchData */,
-				5020C911225B9FEE00334B9A /* Waterfall */,
+				5020C925225BA01600334B9A /* detail */,
 				5020C8DC225B9FE100334B9A /* libs */,
+				5046F19B225CF3EE0012DDFB /* mian */,
 				50D773562253A93D00C8794F /* AppDelegate.h */,
 				50D773572253A93D00C8794F /* AppDelegate.m */,
 				5020C92C225BA04D00334B9A /* PrefixHeader.pch */,
 				50D7735C2253A93D00C8794F /* Main.storyboard */,
-				5020C92D225BA28100334B9A /* MainViewController.h */,
-				5020C92E225BA28100334B9A /* MainViewController.m */,
-				5020C930225BA8B600334B9A /* LeftViewController.h */,
-				5020C931225BA8B600334B9A /* LeftViewController.m */,
 				50D7735F2253A93F00C8794F /* Assets.xcassets */,
 				50D773612253A93F00C8794F /* LaunchScreen.storyboard */,
 				50D773642253A93F00C8794F /* Info.plist */,
@@ -513,30 +490,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5020C910225B9FE100334B9A /* OCGumbo.m in Sources */,
-				5020C91F225B9FEE00334B9A /* WaterfallCollectionViewCell.m in Sources */,
 				5020C90B225B9FE100334B9A /* tag.c in Sources */,
-				5020C923225B9FEE00334B9A /* Fetch.m in Sources */,
-				5020C920225B9FEE00334B9A /* WaterfallCollectionViewLayout.m in Sources */,
 				5020C90E225B9FE100334B9A /* string_piece.c in Sources */,
 				5020C903225B9FE100334B9A /* util.c in Sources */,
 				5020C92B225BA01600334B9A /* ScanCollectionViewCell.m in Sources */,
-				5020C921225B9FEE00334B9A /* WaterfallCollectionViewController.m in Sources */,
 				5020C902225B9FE100334B9A /* string_buffer.c in Sources */,
+				5046F1A4225CF3EE0012DDFB /* LeftViewController.m in Sources */,
 				5020C905225B9FE100334B9A /* vector.c in Sources */,
 				5020C909225B9FE100334B9A /* error.c in Sources */,
+				5046F1A3225CF3EE0012DDFB /* MainViewController.m in Sources */,
 				5020C906225B9FE100334B9A /* attribute.c in Sources */,
+				5046F1A2225CF3EE0012DDFB /* CollectionViewLayout.m in Sources */,
 				5020C907225B9FE100334B9A /* char_ref.c in Sources */,
 				5020C908225B9FE100334B9A /* utf8.c in Sources */,
-				5020C922225B9FEE00334B9A /* WaterfallModel.m in Sources */,
-				5020C932225BA8B600334B9A /* LeftViewController.m in Sources */,
+				5046F1A7225CF4280012DDFB /* MainCollectionViewCell.m in Sources */,
 				5020C90D225B9FE100334B9A /* tokenizer.c in Sources */,
 				50D773662253A93F00C8794F /* main.m in Sources */,
 				5020C92A225BA01600334B9A /* ScanViewController.m in Sources */,
-				5020C92F225BA28100334B9A /* MainViewController.m in Sources */,
+				5046F1AA225CF4580012DDFB /* MainModel.m in Sources */,
 				5020C90C225B9FE100334B9A /* parser.c in Sources */,
 				5020C90F225B9FE100334B9A /* OCGumbo+Query.m in Sources */,
 				50D773582253A93D00C8794F /* AppDelegate.m in Sources */,
-				5020C924225B9FEE00334B9A /* FetchDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScanViewController : UIViewController
 
 @property (nonatomic, strong) NSString *desc;
-@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSArray *images;
 
 @end
 

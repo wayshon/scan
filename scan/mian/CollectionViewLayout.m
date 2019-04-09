@@ -1,12 +1,12 @@
 //
-//  WaterfallCollectionViewLayout.m
-//  UICollectionVIewDemo
+//  CollectionViewLayout.m
+//  scan
 //
-//  Created by DaLei on 2017/6/8.
-//  Copyright © 2017年 DaLei. All rights reserved.
+//  Created by 王旭 on 2019/4/9.
+//  Copyright © 2019 王旭. All rights reserved.
 //
 
-#import "WaterfallCollectionViewLayout.h"
+#import "CollectionViewLayout.h"
 
 /** 默认的列数 */
 static const NSInteger DefaultColumnCount = 3;
@@ -20,7 +20,7 @@ static const UIEdgeInsets DefaultEdgeInsets = {10, 10, 10, 10};
 
 
 
-@interface WaterfallCollectionViewLayout()
+@interface CollectionViewLayout()
 
 /** 存放所有cell的布局属性 */
 @property (nonatomic, strong) NSMutableArray *attrsArray;
@@ -36,9 +36,7 @@ static const UIEdgeInsets DefaultEdgeInsets = {10, 10, 10, 10};
 
 @end
 
-
-
-@implementation WaterfallCollectionViewLayout
+@implementation CollectionViewLayout
 
 #pragma mark - 常见数据处理
 
@@ -169,6 +167,5 @@ static const UIEdgeInsets DefaultEdgeInsets = {10, 10, 10, 10};
 - (CGSize)collectionViewContentSize {
     return CGSizeMake(0, self.contentHeight + self.edgeInsets.bottom);
 }
-
 
 @end

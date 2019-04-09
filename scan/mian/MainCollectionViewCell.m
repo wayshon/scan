@@ -1,15 +1,15 @@
 //
-//  WaterfallCollectionViewCell.m
-//  tools
+//  MainCollectionViewCell.m
+//  scan
 //
-//  Created by jike1 on 2019/3/22.
+//  Created by 王旭 on 2019/4/9.
 //  Copyright © 2019 王旭. All rights reserved.
 //
 
-#import "WaterfallCollectionViewCell.h"
+#import "MainCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface WaterfallCollectionViewCell()
+@interface MainCollectionViewCell()
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UILabel *label;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation WaterfallCollectionViewCell
+@implementation MainCollectionViewCell
 
 - (instancetype)init {
     self = [super init];
@@ -57,19 +57,23 @@
     }
 }
 
-- (void)setModel:(WaterfallModel *)model {
+- (void)setModel:(MainModel *)model {
     _model = model;
     
     [self updateViews];
     
-    NSString *src = _model.src;
+    NSString *src = _model.img;
     NSString *title = _model.title;
     
-    if ([src rangeOfString:@"https://"].location == NSNotFound && [src rangeOfString:@"http://"].location == NSNotFound) {
-        [self.imgView setImage:[UIImage imageNamed:src]];
-    } else {
-        [self.imgView sd_setImageWithURL:[NSURL URLWithString:src] placeholderImage:[self createImageWithColor: RandomRGBColor]];
-    }
+    [self.imgView sd_setImageWithURL:[NSURL URLWithString:src] placeholderImage:[self createImageWithColor: RandomRGBColor] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        NSNumber *num = model.index;
+        if (error && self.errorBlock) {
+            self.errorBlock([num integerValue]);
+        } else if (self.successBlock) {
+            self.successBlock([num integerValue], image);
+            [self updateImage];
+        }
+    }];
     
     [self addSubview:self.imgView];
     self.label.text = title;
@@ -80,6 +84,15 @@
     CGSize size = self.bounds.size;
     [self.imgView setFrame:CGRectMake(0, 0, size.width, size.height - 28)];
     [self.label setFrame:CGRectMake(0, size.height - 23, size.width, 18)];
+}
+
+- (void)updateImage {
+    CGSize size = self.bounds.size;
+    UIImage *image = self.imgView.image;
+    CGFloat fixelW = CGImageGetWidth(image.CGImage);
+    CGFloat fixelH = CGImageGetHeight(image.CGImage);
+    CGFloat itemHeight = fixelH * size.width / fixelW;
+    [self.imgView setFrame:CGRectMake(0, 0, size.width, itemHeight + 50)];
 }
 
 - (UIImage*)createImageWithColor: (UIColor*) color {
